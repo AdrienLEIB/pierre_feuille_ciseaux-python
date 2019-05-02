@@ -112,6 +112,7 @@ def retry(): #Fonction pour recommencer lorsque que l'on perd ou gagne
         score_utilisateur=0
         score = str(score_utilisateur) + ' - ' + str(score_ordinateur)
         Score.config(text=score)
+        Resume.config(text='')
     else:
         showinfo('Ordinateur', 'Dommage...')
         Mafenetre.destroy()

@@ -17,7 +17,7 @@ utilisateur2Feuille = input("Choissiez la touche pour Feuille \n")
 utilisateur2Ciseaux = input("Choissiez la touche pour Ciseaux \n")
 
 while (score_utilisateur!=2) and (score_utilisateur2!=2):
-    utilisateur_coup= input("Joueur 1 - Pierre, Feuille ou Ciseaux? ecrire tous en minuscule \n")
+    utilisateur_coup= input("Joueur 1 - Pierre, Feuille ou Ciseaux? (noubliez pas vos touches)\n")
 
     if utilisateur_coup == utilisateurPierre:
         utilisateur_coup = "pierre"
@@ -28,7 +28,7 @@ while (score_utilisateur!=2) and (score_utilisateur2!=2):
 
     os.system("cls")
 
-    utilisateur2_coup= input("Joueur 2 - Pierre, Feuille ou Ciseaux? ecrire tous en minuscule \n")
+    utilisateur2_coup= input("Joueur 2 - Pierre, Feuille ou Ciseaux? (noubliez pas vos touches)\n")
     print("")
     if utilisateur2_coup == utilisateur2Pierre:
         utilisateur2_coup = "pierre"
@@ -46,7 +46,7 @@ while (score_utilisateur!=2) and (score_utilisateur2!=2):
     #Comparatif pierre user1
     if utilisateur_coup == "pierre" and utilisateur2_coup == "ciseaux":
         score_utilisateur= score_utilisateur + 1
-        print("Le joueur 2 a joue ciseaux, \n Le joueur 1 pierre, \n ", score_utilisateur," - ", score_utilisateur2)
+        print("Le joueur 1 a joue pierre,\n Le joueur 2 ciseaux, \n ", score_utilisateur," - ", score_utilisateur2)
         
 
     elif utilisateur_coup =="pierre" and utilisateur2_coup =="pierre":
