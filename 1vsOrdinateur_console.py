@@ -10,8 +10,6 @@ while (score_utilisateur!=10) and (score_ordinateur!=10):
     #Variable
     ordinateur_coup= random.randint(1,3)
 
-    #ordinateur_coup= input("Joueur 1 - Pierre, Feuille ou Ciseaux? (1,2 ou 3) ecrire tous en minuscule \n")
-
     pierre = 1 #pierre prends la valeur 1
     feuille = 2 #feuille prends la valeur 2
     ciseaux = 3 #ciseaux prends la valeur 3

@@ -7,15 +7,22 @@ score_utilisateur = 0
 score = str(score_utilisateur) + ' - ' + str(score_ordinateur)
 resume = ''
 print(score)
+
+# Cette fonction se lance dès que le joueur appuie sur le bouton ciseaux
 def ciseaux():
+    # On recupere les variables de manière globale afin qu'elles soient modifier en dehors de la fonction
     global score_ordinateur
     global score_utilisateur
     global score
     global resume
+
+    # On genere le coup  de l'ordinateur par un randint
     ordinateur_coup= random.randint(1,3)
     pierre = 1 #pierre prends la valeur 1
     feuille = 2 #feuille prends la valeur 2
     ciseaux = 3 #ciseaux prends la valeur 3
+
+    #On compare le coup du joueur à l'ordinateur
     if(ordinateur_coup==pierre):
         score_ordinateur = score_ordinateur +1
         print("L'ordinateur a joue pierre, vous perdez cette manche le score est donc de :", score_utilisateur," - ", score_ordinateur)
@@ -32,6 +39,7 @@ def ciseaux():
     Score.config(text=score)   
     resultat()
 
+# Cette fonction se lance dès que le joueur appuie sur le bouton pierre
 def pierre():
     global score_utilisateur
     global score_ordinateur
@@ -57,6 +65,7 @@ def pierre():
     Score.config(text=score)
     resultat()
 
+# Cette fonction se lance dès que le joueur appuie sur le bouton feuille
 def feuille():
     global score_utilisateur
     global score_ordinateur
@@ -80,10 +89,13 @@ def feuille():
         resume='L"ordinateur a joue feuille, egalite sur cette manche'
 
     score = str(score_utilisateur) + ' - ' + str(score_ordinateur)
+    #On modifie le labec Resume par la valeur de la variable resume
     Resume.config(text=resume)
+    #Modifie le label Score par la valeur score
     Score.config(text=score)
     resultat()
 
+#Fonction qui verifie si un des deux joueurs à 2 points
 def resultat():
     global score_ordinateur
     global score_utilisateur
@@ -117,21 +129,18 @@ def retry(): #Fonction pour recommencer lorsque que l'on perd ou gagne
         showinfo('Ordinateur', 'Dommage...')
         Mafenetre.destroy()
 
+#On créer la fenetre du projet
 Mafenetre = Tk()
-Mafenetre.title('Pierre Papier ciseaux')
-
+#On lui donne un titre
+Mafenetre.title('Pierre Feuille ciseaux')
+#Importation des images
 feuilleimg= PhotoImage(file='papier.gif')
 pierreimg= PhotoImage(file='pierre.gif')
 ciseauximg= PhotoImage(file='ciseaux.gif')
-
-
-Largeur = 20
-Hauteur = 20
-Canevas = Canvas(Mafenetre, width = Largeur, height =Hauteur, bg = "white")
-
+#Le label qui affiche le score
 Score = Label(Mafenetre,text=score, bg = "white")
 Score.pack()
-
+#Celui qui affiche les dialogues
 Resume = Label(Mafenetre, bg = "white")
 Resume.pack()
 
@@ -143,17 +152,17 @@ Resume.pack()
 # ScoreOrdi.pack()
 
 
-
+#Button pierre
 Pierre = Button(Mafenetre, text ='Pierre', command=pierre)
 Pierre.configure(image=pierreimg)
 Pierre.pack(side = LEFT, padx = 50, pady = 50)
 
-
+#Button feuille
 Feuille = Button(Mafenetre, text ='Feuille', command=feuille)
 Feuille.configure(image=feuilleimg)
 Feuille.pack(side = LEFT, padx = 50, pady = 50)
 
-
+#Buton ciseaux
 Ciseaux = Button(Mafenetre, text ='Ciseaux', command =ciseaux)
 Ciseaux.configure(image=ciseauximg)
 Ciseaux.pack(side = LEFT, padx = 50, pady = 50)
