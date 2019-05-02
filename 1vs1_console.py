@@ -43,38 +43,38 @@ while (score_utilisateur!=2) and (score_utilisateur2!=2):
         print("Un des deux joueurs a saisie une mauvaise touche")
         continue
 
-    #Pierre
+    #Comparatif pierre user1
     if utilisateur_coup == "pierre" and utilisateur2_coup == "ciseaux":
         score_utilisateur= score_utilisateur + 1
-        print("Le joueur 2 a joue ciseaux, Le joueur 1 pierre, le joueur 1 remporte cette manche le score est donc de :", score_utilisateur," - ", score_utilisateur2)
+        print("Le joueur 2 a joue ciseaux, \n Le joueur 1 pierre, \n ", score_utilisateur," - ", score_utilisateur2)
         
 
     elif utilisateur_coup =="pierre" and utilisateur2_coup =="pierre":
-        print("Les joueurs 2 et 1 ont joues pierre, egalite sur cette manche le score est donc de :", score_utilisateur," - ", score_utilisateur2)
+        print("Le joueur 1 a joue pierre, \n Le joueur 2 pierre \n", score_utilisateur," - ", score_utilisateur2)
 
     elif utilisateur_coup =="pierre" and utilisateur2_coup == "feuille":
         score_utilisateur2 = score_utilisateur2 +1
-        print("Le joueur 1 a joue feuille, le joueur 1 a joue pierre, le joueur 2 remporte cette manche le score est donc de :", score_utilisateur," - ", score_utilisateur2)
+        print("Le joueur 1 a joue pierre, \n le joueur 2 a joue feuille :", score_utilisateur," - ", score_utilisateur2)
 
-    #Ciseaux
+    #Comparatif ciseaux user1
     elif utilisateur_coup =="ciseaux" and utilisateur2_coup == "ciseaux":
-        print("Les 2 joueurs ont joue ciseaux, egalite sur cette manche le score est donc de :", score_utilisateur," - ", score_utilisateur2)
+        print("Le joueur 1 a joue ciseaux, \n le joueur 2 a joue ciseaux :", score_utilisateur," - ", score_utilisateur2)
     elif utilisateur_coup =="ciseaux" and utilisateur2_coup =="pierre":
         score_utilisateur2 = score_utilisateur2 +1
-        print("Joueur 2 a joue pierre, Joueur 1 ciseaux, le joueur 2 gagne cette manche le score est donc de :", score_utilisateur," - ", score_utilisateur2)
+        print("Le joueur 1 a joue ciseaux, \n le jouer 2 a joue pierre:", score_utilisateur," - ", score_utilisateur2)
     elif utilisateur_coup == "ciseaux" and utilisateur2_coup == "feuille":
         score_utilisateur= score_utilisateur + 1
-        print("Joueur 2 a joue feuilleet le joueur 1 ciseaux, le joueur 1 remporte cette manche le score est donc de :", score_utilisateur," - ", score_utilisateur2)
+        print("Le joueur 1 a joue ciseaux, \n le joueur 2 a joue feuille", score_utilisateur," - ", score_utilisateur2)
 
-    #Feuille
+    #Comparatif feuille user1
     elif utilisateur_coup == "feuille" and utilisateur2_coup == "ciseaux":
         score_utilisateur2= score_utilisateur2 + 1
-        print("Le joueur 2 a joue ciseaux, le joueur 1 a joue feuille,le joueur 2 remporte cette manche le score est donc de :", score_utilisateur," - ", score_utilisateur2)
+        print("Le joueur 1 a joue feuille, \n le joueur 2 a joue ciseaux:", score_utilisateur," - ", score_utilisateur2)
     elif utilisateur_coup == "feuille" and utilisateur2_coup == "pierre":
         score_utilisateur = score_utilisateur +1
-        print("Le joueur 2 a joue pierre et le joueur 1 feuille, le joueur 1 remporte cette manche le score est donc de :", score_utilisateur," - ", score_utilisateur2)
+        print("Le joueur 1 a joue feuille, \n le joueur 2 a joue pierre :", score_utilisateur," - ", score_utilisateur2)
     elif utilisateur_coup =="feuille" and utilisateur2_coup == "feuille":
-        print("Le joueur 1 et 2 ont joues feuille, egalite sur cette manche le score est donc de :", score_utilisateur," - ", score_utilisateur2)
+        print("Le joueur 1 a joue feuille, \n le joueur 2 a joue feuille :", score_utilisateur," - ", score_utilisateur2)
     print("")
     
     
